@@ -1,0 +1,49 @@
+<div>
+    <table class="table table-responsive table-striped table-hover" style="margin-top: 20px">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tên phòng</th>
+            <th scope="col">Tình trạng</th>
+            <th scope="col">Giá phòng</th>
+            <th scope="col">Mô tả</th>
+            <th scope="col">Thêm ảnh</th>
+            <th scope="col">Sửa</th>
+            <th scope="col">Xóa</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {{#each phong}}
+            <tr>
+                <th scope="row">{{this.id}}</th>
+                <td>{{this.tenphong}}</td>
+                <td>{{this.tinhtrang}}</td>
+                <td>{{this.giaphong}}</td>
+                <td>{{this.mota}}</td>
+
+                <td ><a class="btn btn-success" style="text-decoration: none"
+                                                   href="/phong/image/{{this._id}}">Thêm ảnh</a></td>
+                <td ><a class="btn btn-warning" style="text-decoration: none"
+                                                   href="/phong/edit{{this._id}}">Sửa</a></td>
+                <td ><a class="btn btn-danger" style="text-decoration: none"
+                                                  href="/phong/delete{{this._id}}">Xóa</a></td>
+
+            </tr>
+        {{else}}
+            <tr>
+                <td colspan="5">Bạn chưa có loại phòng nào--
+                    <a href="/phong/add">thêm loại phòng</a>
+                </td>
+
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
+<!--<script>-->
+<!--    let a={{this.content}};-->
+<!--    let result=String.subString(1,70)+"....";-->
+
+<!--    document.getElementById("text-content").InnerHTML=result;-->
+<!--</script>-->

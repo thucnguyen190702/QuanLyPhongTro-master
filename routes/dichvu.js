@@ -1,0 +1,12 @@
+var DichvuController = require('../controllers/dichvu.controller');
+var express = require('express');
+var router = express.Router();
+var dichvuMidleware = require('../middleware/auth.midddleware');
+router.get('/list',dichvuMidleware.LoginRequire, DichvuController.getListDV);
+router.get('/add',dichvuMidleware.LoginRequire, DichvuController.getAddDV);
+router.post('/add',dichvuMidleware.LoginRequire, DichvuController.postAddDV);
+router.get('/edit:id',dichvuMidleware.LoginRequire, DichvuController.getEditDV);
+router.post('/edit:id',dichvuMidleware.LoginRequire, DichvuController.postEditDV);
+router.get('/delete:id',dichvuMidleware.LoginRequire, DichvuController.getDeleteDV);
+router.post('/delete:id',dichvuMidleware.LoginRequire, DichvuController.postDeleteDV);
+module.exports = router;

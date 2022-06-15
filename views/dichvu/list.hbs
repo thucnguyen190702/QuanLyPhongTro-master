@@ -1,0 +1,46 @@
+<div>
+    <table class="table table-responsive table-striped table-hover" style="margin-top: 20px">
+        <thead>
+        <tr >
+            <th scope="col">ID</th>
+            <th scope="col">Tên dịch vụ</th>
+            <th scope="col">Giá dịch vụ</th>
+            <th scope="col">Mô tả</th>
+            <th scope="col">Sửa</th>
+            <th scope="col">Xóa</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {{#each listDV}}
+            <tr>
+                <th scope="row">{{this.id}}</th>
+                <td>{{this.tendichvu}}</td>
+                <td>{{this.giadichvu}}</td>
+                <td>{{this.motadichvu}}</td>
+
+
+                <td style=""><a class="btn btn-warning" style="text-decoration: none"
+                                                   href="/dichvu/edit{{this._id}}">Sửa</a></td>
+                <!--                <td style="background-color: red;text-align: center;color: white"><a href="javascript:xoa()">Xóa</a></td>-->
+                <td style=""><a class="btn btn-danger" style="text-decoration: none" href="/dichvu/delete{{this._id}}">Xóa</a></td>
+                <!--                <td style="text-align: center"><a class="btn btn-primary"  style="text-decoration: none" href="/comics/addimage/{{this._id}}">Add</a></td>-->
+
+            </tr>
+                {{else}}
+            <tr>
+                <td colspan="5">Bạn chưa có dịch vụ nào--
+                    <a href="/dichvu/add">thêm dịch vụ</a>
+                </td>
+
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
+<!--<script>-->
+<!--    let a={{this.content}};-->
+<!--    let result=String.subString(1,70)+"....";-->
+
+<!--    document.getElementById("text-content").InnerHTML=result;-->
+<!--</script>-->

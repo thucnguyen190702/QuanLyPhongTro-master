@@ -1,0 +1,54 @@
+<div>
+    <table class="table table-responsive table-striped table-hover" style="margin-top: 20px">
+        <thead>
+        <tr >
+            <th scope="col">ID</th>
+            <th scope="col">Tên khách hàng</th>
+            <th scope="col">Năm sinh</th>
+            <th scope="col">Số điện thoại</th>
+            <th scope="col">Số CMND</th>
+            <th scope="col">Biển số xe</th>
+            <th scope="col">Quê quán</th>
+            <th scope="col">HKTT</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Sửa</th>
+            <th scope="col">Xóa</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each listKH}}
+            <tr>
+                <th scope="row">{{this.id}}</th>
+                <td>{{this.tenkhachhang}}</td>
+                <td>{{this.namsinh}}</td>
+                <td>{{this.sdt}}</td>
+                <td>{{this.socmnd}}</td>
+                <td>{{this.biensoxe}}</td>
+                <td>{{this.quequan}}</td>
+                <td>{{this.hktt}}</td>
+                <td>{{this.soluong}}</td>
+
+                <td style="text-align: center;"><a class="btn btn-warning" style="text-decoration: none"
+                                                   href="/khachhang/edit{{this._id}}">Sửa</a></td>
+                <!--                <td style="background-color: red;text-align: center;color: white"><a href="javascript:xoa()">Xóa</a></td>-->
+                <td style="text-align: center"><a class="btn btn-danger" style="text-decoration: none" href="/khachhang/delete{{this._id}}">Xóa</a></td>
+<!--                <td style="text-align: center"><a class="btn btn-primary"  style="text-decoration: none" href="/comics/addimage/{{this._id}}">Add</a></td>-->
+
+            </tr>
+        {{else}}
+            <tr>
+                <td colspan="5">Bạn chưa có khách hàng nào--
+                    <a href="/khachhang/add">thêm khách hàng</a>
+                </td>
+
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
+<!--<script>-->
+<!--    let a={{this.content}};-->
+<!--    let result=String.subString(1,70)+"....";-->
+
+<!--    document.getElementById("text-content").InnerHTML=result;-->
+<!--</script>-->

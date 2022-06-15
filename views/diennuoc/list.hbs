@@ -1,0 +1,55 @@
+
+<div>
+    <table class="table table-responsive table-striped table-hover" style="margin-top: 20px">
+        <thead>
+        <tr>
+            <th id="size" scope="col">ID</th>
+            <th id="size" scope="col">Phòng Thuê</th>
+            <th id="size" scope="col">Tên dịch vụ</th>
+            <th id="size" scope="col">Từ ngày</th>
+            <th id="size" scope="col">Đến ngày</th>
+            <th id="size" scope="col">Chỉ số điện cũ</th>
+            <th id="size" scope="col">Chỉ số điện mới</th>
+            <th id="size" scope="col">Chỉ số nước cũ</th>
+            <th id="size" scope="col">Chỉ số nước mới</th>
+            <th id="size" scope="col">Đơn giá điện</th>
+            <th id="size" scope="col">Đơn giá nước</th>
+            <th id="size" scope="col">Thanh toán</th>
+            <th id="size" scope="col">Sửa</th>
+            <th id="size" scope="col">Xóa</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {{#each listDN}}
+            <tr>
+                <th id="size" scope="row">{{this.id}}</th>
+                <td id="size">{{this.idphongthue}}</td>
+                <td id="size">{{this.iddichvu}}</td>
+                <td id="size">{{this.tungay}}</td>
+                <td id="size">{{this.denngay}}</td>
+                <td id="size">{{this.chisodiencu}}</td>
+                <td id="size">{{this.chisodienmoi}}</td>
+                <td id="size">{{this.chisonuoccu}}</td>
+                <td id="size">{{this.chisonuocmoi}}</td>
+                <td id="size">{{this.dongiadien}}</td>
+                <td id="size">{{this.dongianuoc}}</td>
+                <td style="font-size: 15px">{{this.dathanhtoan}}</td>
+                <td><a class="btn btn-warning" style="text-decoration: none" href="/diennuoc/edit{{this._id}}">Sửa</a>
+                </td>
+                <td><a class="btn btn-danger" style="text-decoration: none" href="/diennuoc/delete{{this._id}}">Xóa</a>
+                </td>
+
+
+            </tr>
+        {{else}}
+            <tr>
+                <td colspan="5">Bạn chưa có điện nước--
+                    <a href="/diennuoc/add">thêm điện nước</a>
+                </td>
+
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>

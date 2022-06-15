@@ -1,0 +1,65 @@
+<section class="vh-100 bg-image mt-3 mb-5">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px;background: #EBD9B1 ">
+                        <div class="card-body p-4">
+                            <h2 class="text-uppercase text-center mb-5">Thêm Dịch Vụ</h2>
+                            <form action="" method="post">
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Khách hàng</label>
+                                    <select class="form-select" name="idkhachhang" aria-label="Default select example">
+                                        {{#each listKhachHang}}
+                                            <option value="{{this._id}}">{{this.tenkhachhang}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Phòng</label>
+                                    <select class="form-select" name="idphong" aria-label="Default select example">
+                                        {{#each listPhong}}
+                                            <option value="{{this._id}}">{{this.tenphong}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1cg">Giá phòng</label>
+                                    <input type="number" id="form3Example1cg" name="giaphong"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Tiền đặt cọc</label>
+                                    <input type="number" id="form3Example3cg" name="tiendatcoc"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Ngày thuê</label>
+                                    <input type="date" id="form3Example3cg" name="ngaythue"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Ngày trả</label>
+                                    <input type="date" id="form3Example3cg" name="ngaytra"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Tiền thanh toán</label>
+                                    <input type="number" id="form3Example3cg" name="tienthanhtoan"
+                                           class="form-control form-control-sm"/>
+                                </div>
+
+
+                                <div class="d-flex justify-content-center mt-3">
+                                    <button type="submit"
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-white">Thêm
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

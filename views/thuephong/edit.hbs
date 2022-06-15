@@ -1,0 +1,69 @@
+<section class="vh-100 bg-image mt-3 mb-5">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px;background: #EBD9B1 ">
+                        <div class="card-body p-4">
+                            <h2 class="text-uppercase text-center mb-5">Sửa thông tin</h2>
+                            <form action="" method="post" >
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Khách hàng</label>
+                                    <select class="form-select" name="idloaiphong" aria-label="Default select example">
+                                        {{#each listLP}}
+                                            <option value="{{this._id}}">{{this.tenloaiphong}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Phòng</label>
+                                    <select class="form-select" name="idloaiphong" aria-label="Default select example">
+                                        {{#each listLP}}
+                                            <option value="{{this._id}}">{{this.tenloaiphong}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1cg">Tên phòng</label>
+                                    <input type="text" id="form3Example1cg" name="tenphong"
+                                           class="form-control form-control-sm"/>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <select class="form-select form-select-sm" name="tinhtrang" aria-label=".form-select-sm example">
+                                        <option selected>Tình trạng</option>
+                                        <option value="1">Đã thuê</option>
+                                        <option value="2">Chưa thuê</option>
+                                    </select>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1cg">Giá phòng</label>
+                                    <input value="{{thuephong.giaphong}}" type="number" id="form3Example1cg" name="giaphong"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1cg">Tiền đặt cọc</label>
+                                    <input value="{{thuephong.tiendatcoc}}" type="number" id="form3Example1cg" name="tiendatcoc"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Tổng tiền thanh toán</label>
+                                    <input value="{{thuephong.tienthanhtoan}}" type="text" id="form3Example3cg" name="tienthanhtoan"
+                                           class="form-control form-control-sm"/>
+                                </div>
+
+
+
+                                <div class="d-flex justify-content-center mt-3">
+                                    <button type="submit"
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-white" >Thêm
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

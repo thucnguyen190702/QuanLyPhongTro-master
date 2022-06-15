@@ -1,0 +1,12 @@
+var thuephongController = require('../controllers/thuephong.controller');
+var express = require('express');
+var router = express.Router();
+const authMiddleware = require('../middleware/auth.midddleware');
+router.get('/list',authMiddleware.LoginRequire, thuephongController.getListTP);
+router.get('/add',authMiddleware.LoginRequire, thuephongController.getAddTP);
+router.post('/add',authMiddleware.LoginRequire, thuephongController.postAddTP);
+router.get('/edit:id',authMiddleware.LoginRequire, thuephongController.getEditTP);
+router.post('/edit:id',authMiddleware.LoginRequire, thuephongController.postEditTP);
+router.get('/delete:id',authMiddleware.LoginRequire, thuephongController.getDeleteTP);
+router.post('/delete:id',authMiddleware.LoginRequire, thuephongController.postDeleteTP);
+module.exports = router;

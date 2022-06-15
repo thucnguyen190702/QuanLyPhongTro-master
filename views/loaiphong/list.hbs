@@ -1,0 +1,32 @@
+<div>
+    <table class="table table-responsive table-striped table-hover" style="margin-top: 20px">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tên loại phòng</th>
+            <th scope="col">Sửa</th>
+            <th scope="col">Xóa</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {{#each listLP}}
+            <tr>
+                <th scope="row">{{this.id}}</th>
+                <td>{{this.tenloaiphong}}</td>
+                <td style="text-align: center;"><a class="btn btn-warning" style="text-decoration: none"
+                                                   href="/loaiphong/edit{{this._id}}">Sửa</a></td>
+                <td style="text-align: center"><a class="btn btn-danger" style="text-decoration: none"
+                                                  href="/loaiphong/delete{{this._id}}">Xóa</a></td>
+            </tr>
+        {{else}}
+            <tr>
+                <td colspan="5">Bạn chưa có loại phòng nào--
+                    <a href="/loaiphong/add">thêm loại phòng</a>
+                </td>
+
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>

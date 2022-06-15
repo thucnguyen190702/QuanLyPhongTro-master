@@ -1,0 +1,53 @@
+<div>
+    <table class="table table-responsive table-striped table-hover" style="margin-top: 20px">
+        <thead>
+        <tr >
+            <th scope="col">ID</th>
+            <th scope="col">Tên khách hàng</th>
+            <th scope="col">Tên phòng</th>
+            <th scope="col">Giá phòng</th>
+            <th scope="col">Tiền đặt cọc</th>
+            <th scope="col">Ngày thuê</th>
+            <th scope="col">Ngày trả</th>
+            <th scope="col">Tiền thanh toán</th>
+            <th scope="col">Sửa</th>
+            <th scope="col">Xóa</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        {{#each listTP}}
+            <tr>
+                <th scope="row">{{this.id}}</th>
+                <td>{{this.idkhachhang}}</td>
+                <td>{{this.idphong}}</td>
+                <td>{{this.giaphong}}</td>
+                <td>{{this.tiendatcoc}}</td>
+                <td>{{this.ngaythue}}</td>
+                <td>{{this.ngaytra}}</td>
+                <td>{{this.tienthanhtoan}}</td>
+
+
+                <td><a class="btn btn-warning" style="text-decoration: none" href="/thuephong/edit{{this._id}}">Sửa</a></td>
+                <td><a class="btn btn-danger" style="text-decoration: none" href="/thuephong/delete{{this._id}}">Xóa</a></td>
+
+
+            </tr>
+                {{else}}
+            <tr>
+                <td colspan="5">Bạn chưa có phòng nào thuê--
+                    <a href="/thuephong/add">thêm phòng thuê</a>
+                </td>
+
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
+<!--<script>-->
+<!--    let a={{this.content}};-->
+<!--    let result=String.subString(1,70)+"....";-->
+
+<!--    document.getElementById("text-content").InnerHTML=result;-->
+<!--</script>-->

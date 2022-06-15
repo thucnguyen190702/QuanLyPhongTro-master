@@ -1,0 +1,99 @@
+<section class="vh-100 bg-image mt-3 mb-5">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px;background: #EBD9B1 ">
+                        <div class="card-body p-4">
+                            <h2 class="text-uppercase text-center mb-5">Thêm Điện Nước</h2>
+                            <form action="" method="post">
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Phòng</label>
+                                    <select class="form-select" name="idkhachhang" aria-label="Default select example">
+                                        {{#each listPhong}}
+                                            <option value="{{this._id}}">{{this.tenphong}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Phòng</label>
+                                    <select class="form-select" name="idphong" aria-label="Default select example">
+                                        {{#each listDV}}
+                                            <option value="{{this._id}}">{{this.tendichvu}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Từ ngày</label>
+                                    <input value="{{diennuoc.tungay}}" type="date" id="form3Example3cg" name="tungay"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Đến ngày</label>
+                                    <input value="{{diennuoc.denngay}}" type="date" id="form3Example3cg" name="denngay"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1cg">Chỉ số điện cũ</label>
+                                    <input value="{{diennuoc.chisodiencu}}" type="number" id="form3Example1cg" name="chisodiencu"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Chỉ số điện mới</label>
+                                    <input value="{{diennuoc.chisodienmoi}}" type="number" id="form3Example3cg" name="chisodienmoi"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example1cg">Chỉ số nước cũ</label>
+                                    <input value="{{diennuoc.chisonuoccu}}" type="number" id="form3Example1cg" name="chisonuoccu"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Chỉ số nước mới</label>
+                                    <input value="{{diennuoc.chisonuocmoi}}" type="number" id="form3Example3cg" name="chisonuocmoi"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Đơn giá điện</label>
+                                    <input value="{{diennuoc.dongiadien}}" type="number" id="form3Example3cg" name="dongiadien"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="form3Example3cg">Đơn giá nước</label>
+                                    <input value="{{diennuoc.dongianuoc}}" type="number" id="form3Example3cg" name="dongianuoc"
+                                           class="form-control form-control-sm"/>
+                                </div>
+                                <div class="form-outline mb-4">
+
+
+                                    <select class="form-select form-select-sm" name="dathanhtoan" aria-label=".form-select-sm example">
+                                        <option >Tình trạng</option>
+                                        <option id="dathanhtoan" value="1">Đã thanh toán</option>
+                                        <option id="chuathanhtoan" value="2">Chưa thanh toán</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="d-flex justify-content-center mt-3">
+                                    <button type="submit"
+                                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-white">Thêm
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var thanhtoan = "{{diennuoc.dathanhtoan}}";
+    var dathanhtoan = document.getElementById("dathanhtoan");
+    var chuathanhtoan = document.getElementById("chuathanhtoan");
+    if (thanhtoan == 1) {
+        dathanhtoan.selected = true;
+    } else if (thanhtoan == 2) {
+        chuathanhtoan.selected = true;
+    }
+</script>
