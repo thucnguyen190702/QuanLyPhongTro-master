@@ -61,20 +61,21 @@ exports.getDeleteLP = async (req, res, next) => {
     if (loaiphongs==null) {
         res.send('Không tìm thấy khách hàng');
     }
-    res.render('./loaiphong/delete', {loaiphongs: loaiphongs, title: 'Xóa loại phòng'});
+    res.render('./loaiphong/delete', {loaiphongs: loaiphongs});
 }
-exports.postDeleteLP = async function(req, res) {
+exports.postDeleteLP = function(req, res) {
     let dieukien = {
         _id: req.body.id
     };
-    await LoaiPhong.deleteOne(dieukien, function (err) {
+    LoaiPhong.deleteOne(dieukien, function (err) {
         if (err) {
             console.log(err);
             return;
         }
         else {
             console.log('Xoa thanh cong');
-            res.redirect('./loaiphong/list');
+
         }
     });
+    res.redirect('/loaiphong/list');
 };

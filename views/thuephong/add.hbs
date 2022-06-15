@@ -9,7 +9,7 @@
                             <form action="" method="post">
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Khách hàng</label>
-                                    <select class="form-select" name="idkhachhang" aria-label="Default select example">
+                                    <select class="form-select" name="idkhachhang" aria-label="Default select example"required>
                                         {{#each listKhachHang}}
                                             <option value="{{this._id}}">{{this.tenkhachhang}}</option>
                                         {{/each}}
@@ -17,7 +17,7 @@
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Phòng</label>
-                                    <select class="form-select" name="idphong" aria-label="Default select example">
+                                    <select class="form-select" name="idphong" aria-label="Default select example"required>
                                         {{#each listPhong}}
                                             <option value="{{this._id}}">{{this.tenphong}}</option>
                                         {{/each}}
@@ -26,27 +26,27 @@
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Giá phòng</label>
                                     <input type="number" id="form3Example1cg" name="giaphong"
-                                           class="form-control form-control-sm"/>
+                                           class="form-control form-control-sm"required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Tiền đặt cọc</label>
                                     <input type="number" id="form3Example3cg" name="tiendatcoc"
-                                           class="form-control form-control-sm"/>
+                                           class="form-control form-control-sm"required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Ngày thuê</label>
                                     <input type="date" id="form3Example3cg" name="ngaythue"
-                                           class="form-control form-control-sm"/>
+                                           class="form-control form-control-sm"required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Ngày trả</label>
                                     <input type="date" id="form3Example3cg" name="ngaytra"
-                                           class="form-control form-control-sm"/>
+                                           class="form-control form-control-sm"required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Tiền thanh toán</label>
                                     <input type="number" id="form3Example3cg" name="tienthanhtoan"
-                                           class="form-control form-control-sm"/>
+                                           class="form-control form-control-sm"required/>
                                 </div>
 
 

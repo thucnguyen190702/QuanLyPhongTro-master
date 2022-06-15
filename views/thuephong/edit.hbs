@@ -9,7 +9,7 @@
                             <form action="" method="post" >
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Khách hàng</label>
-                                    <select class="form-select" name="idloaiphong" aria-label="Default select example">
+                                    <select class="form-select" name="idloaiphong" aria-label="Default select example"required >
                                         {{#each listLP}}
                                             <option value="{{this._id}}">{{this.tenloaiphong}}</option>
                                         {{/each}}
@@ -17,7 +17,7 @@
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Phòng</label>
-                                    <select class="form-select" name="idloaiphong" aria-label="Default select example">
+                                    <select class="form-select" name="idloaiphong" aria-label="Default select example"required>
                                         {{#each listLP}}
                                             <option value="{{this._id}}">{{this.tenloaiphong}}</option>
                                         {{/each}}
@@ -26,11 +26,11 @@
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Tên phòng</label>
                                     <input type="text" id="form3Example1cg" name="tenphong"
-                                           class="form-control form-control-sm"/>
+                                           class="form-control form-control-sm"required/>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <select class="form-select form-select-sm" name="tinhtrang" aria-label=".form-select-sm example">
+                                    <select class="form-select form-select-sm" name="tinhtrang" aria-label=".form-select-sm example"required>
                                         <option selected>Tình trạng</option>
                                         <option value="1">Đã thuê</option>
                                         <option value="2">Chưa thuê</option>
@@ -39,17 +39,17 @@
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Giá phòng</label>
                                     <input value="{{thuephong.giaphong}}" type="number" id="form3Example1cg" name="giaphong"
-                                           class="form-control form-control-sm"/>
+                                           class="form-control form-control-sm"required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Tiền đặt cọc</label>
                                     <input value="{{thuephong.tiendatcoc}}" type="number" id="form3Example1cg" name="tiendatcoc"
-                                           class="form-control form-control-sm"/>
+                                           class="form-control form-control-sm"required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Tổng tiền thanh toán</label>
                                     <input value="{{thuephong.tienthanhtoan}}" type="text" id="form3Example3cg" name="tienthanhtoan"
-                                           class="form-control form-control-sm"/>
+                                           class="form-control form-control-sm"required/>
                                 </div>
 
 

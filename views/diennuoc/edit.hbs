@@ -9,7 +9,8 @@
                             <form action="" method="post">
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Phòng</label>
-                                    <select class="form-select" name="idkhachhang" aria-label="Default select example">
+                                    <select class="form-select" name="idkhachhang" aria-label="Default select example"
+                                            required>
                                         {{#each listPhong}}
                                             <option value="{{this._id}}">{{this.tenphong}}</option>
                                         {{/each}}
@@ -17,7 +18,8 @@
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Phòng</label>
-                                    <select class="form-select" name="idphong" aria-label="Default select example">
+                                    <select class="form-select" name="idphong" aria-label="Default select example"
+                                            required>
                                         {{#each listDV}}
                                             <option value="{{this._id}}">{{this.tendichvu}}</option>
                                         {{/each}}
@@ -26,48 +28,55 @@
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Từ ngày</label>
                                     <input value="{{diennuoc.tungay}}" type="date" id="form3Example3cg" name="tungay"
-                                           class="form-control form-control-sm"/>
+                                           class="form-control form-control-sm" required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Đến ngày</label>
                                     <input value="{{diennuoc.denngay}}" type="date" id="form3Example3cg" name="denngay"
-                                           class="form-control form-control-sm"/>
+                                           class="form-control form-control-sm" required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Chỉ số điện cũ</label>
-                                    <input value="{{diennuoc.chisodiencu}}" type="number" id="form3Example1cg" name="chisodiencu"
-                                           class="form-control form-control-sm"/>
+                                    <input value="{{diennuoc.chisodiencu}}" type="number" id="form3Example1cg"
+                                           name="chisodiencu"
+                                           class="form-control form-control-sm" required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Chỉ số điện mới</label>
-                                    <input value="{{diennuoc.chisodienmoi}}" type="number" id="form3Example3cg" name="chisodienmoi"
-                                           class="form-control form-control-sm"/>
+                                    <input value="{{diennuoc.chisodienmoi}}" type="number" id="form3Example3cg"
+                                           name="chisodienmoi"
+                                           class="form-control form-control-sm" required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Chỉ số nước cũ</label>
-                                    <input value="{{diennuoc.chisonuoccu}}" type="number" id="form3Example1cg" name="chisonuoccu"
-                                           class="form-control form-control-sm"/>
+                                    <input value="{{diennuoc.chisonuoccu}}" type="number" id="form3Example1cg"
+                                           name="chisonuoccu"
+                                           class="form-control form-control-sm" required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Chỉ số nước mới</label>
-                                    <input value="{{diennuoc.chisonuocmoi}}" type="number" id="form3Example3cg" name="chisonuocmoi"
-                                           class="form-control form-control-sm"/>
+                                    <input value="{{diennuoc.chisonuocmoi}}" type="number" id="form3Example3cg"
+                                           name="chisonuocmoi"
+                                           class="form-control form-control-sm" required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Đơn giá điện</label>
-                                    <input value="{{diennuoc.dongiadien}}" type="number" id="form3Example3cg" name="dongiadien"
-                                           class="form-control form-control-sm"/>
+                                    <input value="{{diennuoc.dongiadien}}" type="number" id="form3Example3cg"
+                                           name="dongiadien"
+                                           class="form-control form-control-sm" required/>
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Đơn giá nước</label>
-                                    <input value="{{diennuoc.dongianuoc}}" type="number" id="form3Example3cg" name="dongianuoc"
-                                           class="form-control form-control-sm"/>
+                                    <input value="{{diennuoc.dongianuoc}}" type="number" id="form3Example3cg"
+                                           name="dongianuoc"
+                                           class="form-control form-control-sm" required/>
                                 </div>
                                 <div class="form-outline mb-4">
 
 
-                                    <select class="form-select form-select-sm" name="dathanhtoan" aria-label=".form-select-sm example">
-                                        <option >Tình trạng</option>
+                                    <select class="form-select form-select-sm" name="dathanhtoan"
+                                            aria-label=".form-select-sm example" required>
+                                        <option>Tình trạng</option>
                                         <option id="dathanhtoan" value="1">Đã thanh toán</option>
                                         <option id="chuathanhtoan" value="2">Chưa thanh toán</option>
                                     </select>

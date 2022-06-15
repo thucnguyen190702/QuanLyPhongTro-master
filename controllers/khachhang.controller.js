@@ -72,17 +72,19 @@ exports.getDeleteKH = async (req, res, next) => {
     }
     res.render('./khachhang/delete', {khachhang: khachhang,title: 'Xóa khách hàng'});
 }
-exports.postDeleteKH = async (req, res, next) => {
+exports.postDeleteKH =  (req, res, next) => {
     let dieukien = {
         _id: req.params.id,
     }
-    await KhachHang.deleteOne(dieukien, function (err) {
+    console.log(dieukien);
+    KhachHang.deleteOne(dieukien, function (err) {
         if (err) {
             console.log(err);
             return;
         }else{
             console.log("Xóa thành công");
-            res.redirect('/khachhang/list');
+
         }
     });
+    res.redirect('/khachhang/list');
 }

@@ -163,6 +163,4 @@ let dieukien = {_id: req.params.id};
     })
     res.redirect('/phong/list');
 }
-exports.postSearchPhong = async (req, res, next) => {
 
-}

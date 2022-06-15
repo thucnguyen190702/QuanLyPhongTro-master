@@ -9,7 +9,7 @@
                             <form action="" method="post" >
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Loại phòng</label>
-                                    <select class="form-select" name="idloaiphong" aria-label="Default select example">
+                                    <select class="form-select" name="idloaiphong" aria-label="Default select example"required>
                                         {{#each listLP}}
                                             <option value="{{this._id}}">{{this.tenloaiphong}}</option>
                                         {{/each}}
@@ -17,14 +17,14 @@
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Tên phòng</label>
-                                    <input value="{{phong.tenphong}}" type="text" id="form3Example1cg" name="tenphong"
+                                    <input value="{{phong.tenphong}}" type="text" id="form3Example1cg" name="tenphong"required
                                            class="form-control form-control-sm"/>
                                 </div>
                                 <!--                                <label class="form-label" for="form3Example3cg">Tình trạng</label>-->
                                 <div class="form-outline mb-4">
 
 
-                                    <select class="form-select form-select-sm" name="tinhtrang" aria-label=".form-select-sm example">
+                                    <select class="form-select form-select-sm" name="tinhtrang" aria-label=".form-select-sm example"required>
                                         <option selected>Tình trạng</option>
                                         <option value="1">Đã thuê</option>
                                         <option value="2">Chưa thuê</option>
@@ -32,13 +32,13 @@
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example1cg">Giá phòng</label>
-                                    <input value="{{phong.giaphong}}" type="number" id="form3Example1cg" name="giaphong"
+                                    <input value="{{phong.giaphong}}" type="number" id="form3Example1cg" name="giaphong"required
                                            class="form-control form-control-sm"/>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3cg">Mô tả</label>
-                                    <input value="{{phong.mota}}" type="text" id="form3Example3cg" name="mota"
+                                    <input value="{{phong.mota}}" type="text" id="form3Example3cg" name="mota"required
                                            class="form-control form-control-sm"/>
                                 </div>
 

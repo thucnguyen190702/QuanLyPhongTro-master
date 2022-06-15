@@ -65,13 +65,14 @@ exports.postDeleteDV = async function (req, res) {
     const dieukien = {
         _id: req.params.id
     };
-    await DichVu.deleteOne(dieukien, function (err) {
+     DichVu.deleteOne(dieukien, function (err) {
         if (err) {
             console.log(err);
             return;
         }else {
             console.log('Xoa thanh cong');
-            res.redirect('/dichvu/list');
         }
-    });
+    })
+    res.redirect('/dichvu/list');
+
 };
